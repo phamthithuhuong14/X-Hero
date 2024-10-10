@@ -1,4 +1,3 @@
-
 import { Route, Routes } from "react-router-dom";
 import HeroList from "./Component/Herolist";
 import CreateHero from "./Component/CreateHero";
@@ -11,12 +10,9 @@ import GameChoice from "./Component/GameChoice";
 import EditHero from "./Component/EditHero";
 import { ToastContainer } from "react-toastify";
 
-
-
 const App = () => {
   return (
-    
-    <HeroProvider>
+    <>
       <ToastContainer />
       <Routes>
         <Route path="/" element={<HeroList />} />
@@ -28,7 +24,7 @@ const App = () => {
         <Route path="/review" element={<Review />} />
         <Route path="/edithero/:id" element={<EditHero />} />
       </Routes>
-    </HeroProvider>
+    </>
   );
 };
 
