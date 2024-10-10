@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, Routes, useNavigate } from "react-router-dom";
 import "../App.css";
@@ -72,7 +71,7 @@ const HeroList: React.FC = () => {
     setFilteredHeroes(updatedHeroes);
     localStorage.setItem("heroes", JSON.stringify(updatedHeroes)); // Cập nhật localStorage
     if (updatedHeroes.length === 0) {
-      alert("")
+      alert("");
     }
   };
 

@@ -1,7 +1,5 @@
 import React from "react";
 
-type Props = {};
-
 interface Hero {
   Role: string;
   Blood: string;
