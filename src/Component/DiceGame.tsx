@@ -54,6 +54,10 @@ const DiceGame: React.FC = () => {
     navigate("/");
   };
 
+  const gotobattle = () => {
+    navigate("/battle");
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br bg-slate-300 flex items-center justify-center p-4">
       <div className="bg-white rounded-xl shadow-2xl p-8 max-w-md w-full">
@@ -92,6 +96,7 @@ const DiceGame: React.FC = () => {
         >
           Kiểm tra ai chơi trước
         </button>
+
         <p className="flex mt-5 cursor-pointer ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +117,16 @@ const DiceGame: React.FC = () => {
         </p>
 
         {result && (
-          <p className="text-2xl font-bold mt-6 text-center text-purple-600 animate-pulse">
+          <p className="text-xl font-bold mt-6 text-center text-purple-600 animate-pulse">
             {result}
+            <div>
+              <button
+                onClick={gotobattle}
+                className="text-sm w-20 h-[41px] mt-10 py-2 ml-[299px] bg-blue-500 hover:bg-green-600 text-white font-bold rounded-lg transition-colors duration-200 transform hover:scale-105"
+              >
+                Bắt đầu
+              </button>
+            </div>
           </p>
         )}
       </div>

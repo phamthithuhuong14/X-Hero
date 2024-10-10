@@ -9,6 +9,7 @@ import Review from "./Component/Review";
 import GameChoice from "./Component/GameChoice";
 import EditHero from "./Component/EditHero";
 import { ToastContainer } from "react-toastify";
+import BattlePage from "./Component/BattlePage";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/infor" element={<HeroInformation />} />
           <Route path="/review" element={<Review />} />
           <Route path="/edithero/:id" element={<EditHero />} />
+          <Route path="/battle" element={<BattlePage />} />
         </Routes>
       </HeroProvider>
     </>
