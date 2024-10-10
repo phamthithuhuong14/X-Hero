@@ -13,17 +13,19 @@ import { ToastContainer } from "react-toastify";
 const App = () => {
   return (
     <>
-      <ToastContainer />
-      <Routes>
-        <Route path="/" element={<HeroList />} />
-        <Route path="/hero/:id" element={<HeroDetail />} />
-        <Route path="/createhero" element={<CreateHero />} />
-        <Route path="/gamechoice" element={<GameChoice />} />
-        <Route path="/dice" element={<DiceGame />} />
-        <Route path="/infor" element={<HeroInformation />} />
-        <Route path="/review" element={<Review />} />
-        <Route path="/edithero/:id" element={<EditHero />} />
-      </Routes>
+      <HeroProvider>
+        <ToastContainer />
+        <Routes>
+          <Route path="/" element={<HeroList />} />
+          <Route path="/hero/:id" element={<HeroDetail />} />
+          <Route path="/createhero" element={<CreateHero />} />
+          <Route path="/gamechoice" element={<GameChoice />} />
+          <Route path="/dice" element={<DiceGame />} />
+          <Route path="/infor" element={<HeroInformation />} />
+          <Route path="/review" element={<Review />} />
+          <Route path="/edithero/:id" element={<EditHero />} />
+        </Routes>
+      </HeroProvider>
     </>
   );
 };
