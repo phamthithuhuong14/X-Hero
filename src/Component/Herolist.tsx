@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, Routes, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
-import { toast } from "react-toastify";
 
 interface Hero {
   id: number;

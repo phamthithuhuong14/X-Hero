@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Route, Routes } from "react-router-dom";
 import HeroList from "./Component/Herolist";
 import CreateHero from "./Component/CreateHero";
@@ -11,9 +11,9 @@ import GameChoice from "./Component/GameChoice";
 import EditHero from "./Component/EditHero";
 import { ToastContainer } from "react-toastify";
 
-type Props = {};
 
-const App = (props: Props) => {
+
+const App = () => {
   return (
     
     <HeroProvider>
