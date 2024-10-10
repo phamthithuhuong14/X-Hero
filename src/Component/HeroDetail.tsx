@@ -75,7 +75,7 @@ const HeroDetail: React.FC = () => {
       >
         Trang chủ
       </button> */}
-        <a href="" onClick={gotoHeroInf} className="underline ml-12">
+        <a href="/infor" onClick={gotoHeroInf} className="underline ml-12">
           Chi tiết về Hero
         </a>
       </div>
