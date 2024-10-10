@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface Hero {
   name: string;
@@ -21,6 +22,7 @@ interface HeroProps {
 }
 
 const HeroInformation: React.FC<HeroProps> = ({ hero }) => {
+  const navigate = useNavigate();
   const inforHero: Hero = {
     name: "Giới thiệu Hero",
     avatar:
@@ -41,6 +43,10 @@ const HeroInformation: React.FC<HeroProps> = ({ hero }) => {
   // Sử dụng hero từ props nếu có, nếu không sử dụng exampleHero
   const heroToDisplay = hero || inforHero;
 
+  const gotoRev = () => {
+    navigate("/review");
+  };
+
   return (
     <div className="hero-info w-1/2 bg-slate-300 border ml-[25%] mt-5 rounded text-black h-[20%] shadow-customer">
       <h1 className="text-4xl ml-20 mt-10">{heroToDisplay.name}</h1>
@@ -52,9 +58,8 @@ const HeroInformation: React.FC<HeroProps> = ({ hero }) => {
             alt={`${heroToDisplay.name} image`}
             className="hero-image w-[90%] h-64"
           />
-          <a className="underline text-sm text-black" href="/review">
+          <a className="underline text-lg text-black" href="" onClick={gotoRev}>
             Xem Review
-            
           </a>
 
           {/* <video src={heroToDisplay.Video} controls className="hero-video">
