@@ -36,7 +36,7 @@ export const HeroProvider: React.FC<HeroProviderProps> = ({ children }) => {
     const hero = { ...newHero, id: Date.now() };
     
     setHeroes
-    (prevHeroes => {
+    (() => {
         const updatedHeroes = [...heroes, hero]
         localStorage.setItem('heroes', JSON.stringify(updatedHeroes))
         return updatedHeroes;

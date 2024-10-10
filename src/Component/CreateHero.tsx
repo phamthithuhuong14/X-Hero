@@ -19,7 +19,7 @@ interface Hero {
 
 const CreateHero: React.FC = () => {
   const navigate = useNavigate();
-  const { addHero } = useHero();
+  // const { addHero } = useHero();
   const [hero, setHero] = useState<Omit<Hero, "id">>({
     name: "",
     image: "",
